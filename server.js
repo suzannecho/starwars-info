@@ -21,7 +21,7 @@ var darthmaul = {
   forcePoints: 1200
 };
 
-var Obi_wan_Kenobi = {
+var Obi_wan_kenobi = {
   name: "Obi Wan Kenobi"
   role: "Jedi",
   age: 100,

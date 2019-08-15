@@ -21,7 +21,7 @@ var darthmaul = {
   forcePoints: 1200
 };
 
-var Obi_wan_kenobi = {
+var Obiwankenobi = {
   name: "Obi Wan Kenobi"
   role: "Jedi",
   age: 100,
@@ -43,7 +43,7 @@ app.get("/darthmaul", function(req, res) {
 });
 
 app.get("/obiwankenobi", function(req, res) {
-  res.send(Obi_wan_kenobi)
+  res.send(Obiwankenobi)
 })
 // Listener
 // ===========================================================

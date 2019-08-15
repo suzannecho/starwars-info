@@ -6,27 +6,25 @@ var app = express();
 var PORT = 3000;
 
 // Data
-// ===========================================================
-var yoda = {
+var characters = [{
+  routeName: "yoda",
   name: "Yoda",
   role: "Jedi Master",
   age: 900,
   forcePoints: 2000
-};
-
-var darthmaul = {
+}, {
+  routeName: "darthmaul",
   name: "Darth Maul",
   role: "Sith Lord",
   age: 200,
   forcePoints: 1200
-};
-
-var Obiwankenobi = {
+}, {
+  routeName: "obiwankenobi",
   name: "Obi Wan Kenobi",
-  role: "Jedi",
-  age: 100,
-  forcePoints: 1500
-};
+  role: "Jedi Knight",
+  age: 60,
+  forcePoints: 1350
+}];
 
 // Routes
 // ===========================================================
@@ -34,17 +32,16 @@ app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/yoda", function(req, res) {
-  res.json(yoda);
+app.get("/:character", function(req, res) {
+  var chosen = req.params.character;
+
+  // What does this log?
+  console.log(chosen);
+
+  res.end();
 });
 
-app.get("/darthmaul", function(req, res) {
-  res.json(darthmaul);
-});
 
-app.get("/obiwankenobi", function(req, res) {
-  res.send(Obiwankenobi)
-})
 // Listener
 // ===========================================================
 app.listen(PORT, function() {
